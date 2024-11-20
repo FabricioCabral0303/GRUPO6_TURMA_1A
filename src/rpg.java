@@ -354,4 +354,27 @@ public class rpg {
             showResults();
         }
     }
+    private void checkAnswer(int buttonIndex) {
+        if (attempts > 0) { // Verifica se ainda há tentativas
+            Question currentQuestion = questions.get(currentQuestionIndex - 1); // A pergunta atual é a anterior ao índice atual
+            String selectedAnswer = "";
+            switch (buttonIndex) {
+                case 0: selectedAnswer = "A"; break;
+                case 1: selectedAnswer = "B"; break;
+                case 2: selectedAnswer = "C"; break;
+                case 3: selectedAnswer = "D"; break;
+                case 4: selectedAnswer = "E"; break;
+            }
+            if (selectedAnswer.equals(currentQuestion.correctAnswer)) {
+                correctAnswers++;
+            } else {
+                attempts--; // Diminui o número de tentativas caso erre
+            }
+            showNextQuestion(); // Avança para a próxima pergunta
+            attemptsLabel.setText("Tentativas restantes: " + attempts); // Atualiza a label de tentativas
+        } else {
+            showResults(); // Se não há tentativas, mostra os resultados
+        }
+    }
+
 
