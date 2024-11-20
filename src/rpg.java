@@ -217,3 +217,13 @@ public class rpg {
                 "3. Você tem 5 tentativas para cada pergunta.\n" +
                 "4. Boa sorte!");
     }
+    private static void showCredits() {
+        // Implemente o conteúdo da tela de créditos aqui
+        // Por exemplo:
+        JOptionPane.showMessageDialog(mainFrame, "Créditos:\n" +
+                "Desenvolvido por: [Fabricio Cabral, Lucas Rezende, Kaik Nascimento e Hebert Reis]\n" +
+                "Grupo 6: [Turma 1A]\n " +
+                "\nEm forma de agradecimentos, este jogo foi desenvolvido em cima da Matéria de UX-UI do Professor: [Carlos William]");
+    }
+}
+
