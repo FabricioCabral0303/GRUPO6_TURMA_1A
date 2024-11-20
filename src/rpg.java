@@ -190,4 +190,13 @@ public class rpg {
 
         questionPanel.add(answerPanel, BorderLayout.CENTER);
         contentPane.add(questionPanel, BorderLayout.CENTER);
-        
+
+        JLabel attemptsLabel = new JLabel("Tentativas restantes: 5", SwingConstants.RIGHT);
+        attemptsLabel.setFont(new Font("Arial", Font.PLAIN, 18));
+        attemptsLabel.setForeground(Color.WHITE);
+
+        JPanel labelPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
+        labelPanel.setBackground(new Color(0x05072B));
+        labelPanel.add(attemptsLabel);
+
+        contentPane.add(labelPanel, BorderLayout.SOUTH);
