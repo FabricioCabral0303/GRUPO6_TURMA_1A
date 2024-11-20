@@ -62,3 +62,25 @@ public class Villalva {
         mainPanel.add(spacePanel);
 
         contentPane.add(mainPanel, BorderLayout.CENTER);
+         // Cria o campo de entrada de texto
+         inputField = new JTextField();
+         inputField.setPreferredSize(new Dimension(100, 30));
+         inputField.setBackground(inputFieldColor);
+         inputField.setForeground(textColor);
+         inputField.setHorizontalAlignment(JTextField.CENTER);
+         inputField.setBorder(BorderFactory.createEmptyBorder()); // Remove a borda
+         inputField.setFont(new Font("Arial", Font.PLAIN, 20)); // Define a fonte para o inputField
+         inputField.addKeyListener(new KeyListener() {
+             @Override
+             public void keyTyped(KeyEvent e) {}
+ 
+             @Override
+             public void keyPressed(KeyEvent e) {}
+ 
+             @Override
+             public void keyReleased(KeyEvent e) {
+                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                     processInput();
+                 }
+             }
+         });
