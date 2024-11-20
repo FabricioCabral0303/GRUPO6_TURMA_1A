@@ -319,4 +319,17 @@ public class rpg {
                 "A"));
 
         Collections.shuffle(questions);
+        //kaik
+         // Adiciona ActionListener aos botões 
+         for (int i = 0; i < answerButtons.length; i++) {
+            final int buttonIndex = i;
+            answerButtons[i].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    checkAnswer(buttonIndex);
+                }
+            });
+        }
+    }
+
 
