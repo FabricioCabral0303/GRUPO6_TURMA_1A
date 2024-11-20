@@ -84,3 +84,76 @@ public class Villalva {
                  }
              }
          });
+         
+        // Cria um painel para o campo de entrada
+        JPanel inputPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        inputPanel.setBackground(new Color(0x126BD1));
+        inputPanel.add(inputField);
+
+        contentPane.add(inputPanel, BorderLayout.SOUTH);
+
+        // Adiciona ActionListener aos botões
+        jogarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                startQuiz();
+            }
+        });
+
+        instrucoesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showInstructions();
+            }
+        });
+
+        creditosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showCredits();
+            }
+        });
+
+        sairButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+    }
+
+    // Cria um botão com estilo e dimensões definidas
+    private static JButton createButton(String text, int width, int height, Color textColor) {
+        JButton button = new JButton(text);
+        button.setPreferredSize(new Dimension(width, height));
+        button.setFont(new Font("Arial", Font.PLAIN, 20));
+        button.setForeground(textColor);
+        button.setBackground(new Color(0x126BD1));
+        button.setBorder(BorderFactory.createEmptyBorder());
+        button.setFocusPainted(false);
+        return button;
+    }
+
+    // Processa a entrada do usuário no campo de texto
+    private static void processInput() {
+        String input = inputField.getText();
+        inputField.setText(""); // Limpa o campo de texto
+
+        switch (input) {
+            case "1":
+                startQuiz();
+                break;
+            case "2":
+                showInstructions();
+                break;
+            case "3":
+                showCredits();
+                break;
+            case "4":
+                System.exit(0);
+                break;
+            default:
+                // Exibe uma mensagem de erro
+                JOptionPane.showMessageDialog(mainFrame, "Entrada inválida. Digite 1, 2, 3 ou 4.", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }
