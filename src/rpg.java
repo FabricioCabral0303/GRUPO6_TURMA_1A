@@ -137,3 +137,15 @@ public class rpg {
         // Cria a tela do quiz
         createQuizScreen();
     }
+
+     // Método para criar a tela do quiz
+     private static void createQuizScreen() {
+        // Cria a tela do quiz como você já tinha implementado anteriormente
+        JLabel titleLabel = new JLabel("Os Diamantes de Villalva", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Arial", Font.ITALIC, 36));
+        titleLabel.setForeground(new Color(0xFF7F2A));
+        contentPane.add(titleLabel, BorderLayout.NORTH);
+
+        JPanel questionPanel = new JPanel(new BorderLayout());
+        questionPanel.setBackground(new Color(0x05072B));
+        questionPanel.setBorder(BorderFactory.createEmptyBorder(40, 40, 0, 0));
