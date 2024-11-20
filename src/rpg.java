@@ -200,3 +200,9 @@ public class rpg {
         labelPanel.add(attemptsLabel);
 
         contentPane.add(labelPanel, BorderLayout.SOUTH);
+
+        // Inicializa o jogo
+        DoubleDiamondQuestions game = new DoubleDiamondQuestions(questionArea, buttons, answerPanel, labelPanel, attemptsLabel, contentPane);
+        game.startQuiz();
+    }
+//fabricio
