@@ -376,5 +376,42 @@ public class rpg {
             showResults(); // Se não há tentativas, mostra os resultados
         }
     }
+    private void showResults() {
+        questionArea.setText("Fim do Quiz! Você acertou " + correctAnswers + " de " + questions.size() + " perguntas.");
+        // Remove os botões do painel
+        for (JButton button : answerButtons) {
+            answerPanel.remove(button); 
+        }
+        // Remove a label do painel
+        labelPanel.remove(attemptsLabel); 
+        // Remove o labelPanel do contentPane
+        contentPane.remove(labelPanel);
+
+        answerPanel.revalidate(); 
+        answerPanel.repaint(); 
+        contentPane.revalidate(); // Atualiza o layout do contentPane
+        contentPane.repaint(); // Redesenha o contentPane
+    }
+
+    private class Question {
+        private String questionText;
+        private String optionA;
+        private String optionB;
+        private String optionC;
+        private String optionD;
+        private String optionE;
+        private String correctAnswer;
+
+        public Question(String questionText, String optionA, String optionB, String optionC, String optionD, String optionE, String correctAnswer) {
+            this.questionText = questionText;
+            this.optionA = optionA;
+            this.optionB = optionB;
+            this.optionC = optionC;
+            this.optionD = optionD;
+            this.optionE = optionE;
+            this.correctAnswer = correctAnswer;
+        }
+    }
+}
 
 
