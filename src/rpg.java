@@ -149,3 +149,15 @@ public class rpg {
         JPanel questionPanel = new JPanel(new BorderLayout());
         questionPanel.setBackground(new Color(0x05072B));
         questionPanel.setBorder(BorderFactory.createEmptyBorder(40, 40, 0, 0));
+
+         // Desabilita o sublinhado, a seleção e o foco no questionArea
+         JTextArea questionArea = new JTextArea();
+         questionArea.setEditable(false);
+         questionArea.setFont(new Font("Plain", Font.PLAIN, 24));
+         questionArea.setLineWrap(true);
+         questionArea.setWrapStyleWord(true);
+         questionArea.setForeground(new Color(0xFF7F2A));
+         questionArea.setBackground(new Color(0x05072B));
+         questionArea.setHighlighter(null);
+         questionArea.setSelectionColor(new Color(0x05072B));
+         questionArea.setFocusable(false);
