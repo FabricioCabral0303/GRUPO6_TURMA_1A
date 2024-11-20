@@ -171,3 +171,12 @@ public class rpg {
          answerPanel.setLayout(new BoxLayout(answerPanel, BoxLayout.Y_AXIS));
  
          answerPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+
+         JButton[] buttons = new JButton[5];
+         for (int i = 0; i < 5; i++) {
+             buttons[i] = new JButton(" ");
+             buttons[i].setFont(new Font("Arial", Font.PLAIN, 20));
+             buttons[i].setForeground(new Color(0xFF7F2A));
+             buttons[i].setBackground(new Color(0x05072B));
+             buttons[i].setBorder(BorderFactory.createEmptyBorder());
+             buttons[i].setFocusPainted(false); // Desabilita a marcação de foco
