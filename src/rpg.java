@@ -161,3 +161,13 @@ public class rpg {
          questionArea.setHighlighter(null);
          questionArea.setSelectionColor(new Color(0x05072B));
          questionArea.setFocusable(false);
+
+         JScrollPane scrollPane = new JScrollPane(questionArea);
+         scrollPane.setBorder(BorderFactory.createEmptyBorder());
+         questionPanel.add(scrollPane, BorderLayout.NORTH);
+ 
+         JPanel answerPanel = new JPanel();
+         answerPanel.setBackground(new Color(0x05072B));
+         answerPanel.setLayout(new BoxLayout(answerPanel, BoxLayout.Y_AXIS));
+ 
+         answerPanel.add(Box.createRigidArea(new Dimension(0, 10)));
