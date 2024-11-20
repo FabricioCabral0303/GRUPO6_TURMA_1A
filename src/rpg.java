@@ -332,7 +332,7 @@ public class rpg {
         }
     }
 
-    ublic void startQuiz() {
+    public void startQuiz() {
         showNextQuestion();
     }
 
