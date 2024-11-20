@@ -225,5 +225,98 @@ public class rpg {
                 "Grupo 6: [Turma 1A]\n " +
                 "\nEm forma de agradecimentos, este jogo foi desenvolvido em cima da Matéria de UX-UI do Professor: [Carlos William]");
     }
-}
+}   class DoubleDiamondQuestions {
+
+    private JTextArea questionArea;
+    private JButton[] answerButtons;
+    private JPanel answerPanel; 
+    private int currentQuestionIndex = 0;
+    private int correctAnswers = 0;
+    private int attempts = 5; 
+    private List<Question> questions = new ArrayList<>();
+    private JLabel attemptsLabel; 
+    private JPanel labelPanel; 
+    private JPanel contentPane; // Adiciona o contentPane como atributo
+
+    public DoubleDiamondQuestions(JTextArea questionArea, JButton[] answerButtons, JPanel answerPanel, JPanel labelPanel, JLabel attemptsLabel, JPanel contentPane) { 
+        this.questionArea = questionArea;
+        this.answerButtons = answerButtons;
+        this.answerPanel = answerPanel; 
+        this.labelPanel = labelPanel; 
+        this.attemptsLabel = attemptsLabel; 
+        this.contentPane = contentPane; // Atribui o contentPane
+
+        // Cria as perguntas
+        questions.add(new Question("Qual é o primeiro passo do Double Diamond?",
+                "Definir o problema",
+                "Criar um protótipo",
+                "Testar a solução",
+                "Definir a solução",
+                "Analisar os resultados",
+                "A"));
+        questions.add(new Question("Em qual etapa do Double Diamond você faz a pesquisa e define o problema?",
+                "Descobrir",
+                "Definir",
+                "Desenvolver",
+                "Entregar",
+                "Avaliar",
+                "A"));
+        questions.add(new Question("Qual o objetivo da etapa 'Definir' no Double Diamond?",
+                "Criar soluções possíveis",
+                "Testar a viabilidade da solução",
+                "Coletar dados sobre o problema",
+                "Compreender o problema em profundidade",
+                "Definir o problema a ser resolvido",
+                "E"));
+        questions.add(new Question("O que acontece na etapa 'Desenvolver' do Double Diamond?",
+                "Criar protótipos da solução",
+                "Testar as soluções com usuários",
+                "Analisar os resultados dos testes",
+                "Compreender as necessidades dos usuários",
+                "Definir a melhor solução para o problema",
+                "A"));
+        questions.add(new Question("Em qual etapa do Double Diamond você realiza testes com usuários?",
+                "Descobrir",
+                "Definir",
+                "Desenvolver",
+                "Entregar",
+                "Avaliar",
+                "D"));
+        questions.add(new Question("Qual o objetivo da etapa 'Entregar' no Double Diamond?",
+                "Criar um protótipo da solução",
+                "Testar a solução com usuários",
+                "Implementar a solução final",
+                "Coletar dados sobre o problema",
+                "Definir o problema a ser resolvido",
+                "C"));
+        questions.add(new Question("O que acontece na etapa 'Avaliar' do Double Diamond?",
+                "Analisar os resultados da implementação",
+                "Testar a solução com usuários",
+                "Criar um protótipo da solução",
+                "Definir o problema a ser resolvido",
+                "Coletar dados sobre o problema",
+                "A"));
+        questions.add(new Question("Qual das etapas abaixo NÃO faz parte do Double Diamond?",
+                "Descobrir",
+                "Definir",
+                "Criar",
+                "Entregar",
+                "Avaliar",
+                "C"));
+        questions.add(new Question("Em qual etapa do Double Diamond você identifica as necessidades dos usuários?",
+                "Descobrir",
+                "Definir",
+                "Desenvolver",
+                "Entregar",
+                "Avaliar",
+                "A"));
+        questions.add(new Question("O que acontece na etapa 'Definir' do Double Diamond?",
+                "Definir o problema a ser resolvido",
+                "Testar a solução com usuários",
+                "Criar um protótipo da solução",
+                "Implementar a solução final",
+                "Analisar os resultados da implementação",
+                "A"));
+
+        Collections.shuffle(questions);
 
