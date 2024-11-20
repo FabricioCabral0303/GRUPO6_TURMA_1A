@@ -332,4 +332,26 @@ public class rpg {
         }
     }
 
+    ublic void startQuiz() {
+        showNextQuestion();
+    }
+
+    private void showNextQuestion() {
+        if (currentQuestionIndex < questions.size() && attempts > 0) {
+            Question currentQuestion = questions.get(currentQuestionIndex);
+            // Exibe apenas a pergunta no questionArea
+            questionArea.setText((currentQuestionIndex + 1) + ") " + currentQuestion.questionText);
+
+            // Define o texto dos botões com as opções
+            answerButtons[0].setText("A) " + currentQuestion.optionA);
+            answerButtons[1].setText("B) " + currentQuestion.optionB);
+            answerButtons[2].setText("C) " + currentQuestion.optionC);
+            answerButtons[3].setText("D) " + currentQuestion.optionD);
+            answerButtons[4].setText("E) " + currentQuestion.optionE);
+
+            currentQuestionIndex++;
+        } else {
+            showResults();
+        }
+    }
 
