@@ -206,3 +206,14 @@ public class rpg {
         game.startQuiz();
     }
 //fabricio
+
+    // Métodos para as telas de instruções e créditos (implemente conforme necessário)
+    private static void showInstructions() {
+        // Implemente o conteúdo da tela de instruções aqui
+        // Por exemplo:
+        JOptionPane.showMessageDialog(mainFrame, "Instruções do jogo:\n" +
+                "1. Leia cada pergunta com atenção.\n" +
+                "2. Selecione a resposta correta entre as opções.\n" +
+                "3. Você tem 5 tentativas para cada pergunta.\n" +
+                "4. Boa sorte!");
+    }
