@@ -180,3 +180,14 @@ public class rpg {
              buttons[i].setBackground(new Color(0x05072B));
              buttons[i].setBorder(BorderFactory.createEmptyBorder());
              buttons[i].setFocusPainted(false); // Desabilita a marcação de foco
+
+             answerPanel.add(buttons[i]);
+
+            if (i < buttons.length - 1) {
+                answerPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+            }
+        }
+
+        questionPanel.add(answerPanel, BorderLayout.CENTER);
+        contentPane.add(questionPanel, BorderLayout.CENTER);
+        
