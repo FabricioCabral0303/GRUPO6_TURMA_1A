@@ -126,3 +126,14 @@ public class rpg {
         });
     }
 //lucas
+    	//fabricio
+    // Método para iniciar o quiz (após clicar em "JOGAR")
+    private static void startQuiz() {
+        // Remove a tela inicial
+        contentPane.removeAll(); 
+        contentPane.revalidate(); 
+        contentPane.repaint(); 
+
+        // Cria a tela do quiz
+        createQuizScreen();
+    }
